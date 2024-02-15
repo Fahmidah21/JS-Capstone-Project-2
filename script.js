@@ -1,9 +1,11 @@
 // List of words that can be edited by the programmer
 let words = [
-  'olive', 'tomato', 'grape', 'feta', 'hummus',
-  'quinoa', 'cucumber', 'basil', 'almond', 'spinach',
-  'mediterranean', 'dressing', 'salad', 'oliveoil',
-  'garlic', 'lemon', 'oregano', 'chickpea', 'fish'
+  'argentina', 'australia', 'brazil', 'canada', 'china',
+    'egypt', 'france', 'germany', 'india', 'italy',
+    'japan', 'kenya', 'mexico', 'netherlands', 'norway',
+    'pakistan', 'peru', 'qatar', 'russia', 'spain',
+    'sweden', 'thailand', 'turkey', 'ukraine', 'usa',
+    'vietnam', 'wales', 'yemen', 'zimbabwe'
 ];
 // chosenword is a randomly picked word from the array above
 let chosenword = words[Math.floor(Math.random() * words.length)];
