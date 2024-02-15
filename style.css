@@ -1,4 +1,43 @@
-html {
+html, body {
   height: 100%;
   width: 100%;
+}
+body {
+  background-color: #faedcd;
+  margin-top: 100px;
+}
+.title {
+  text-align:center;
+}
+body {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+image {
+  width: 450px;
+  height: 250px;
+  position: relative;
+  margin: 0 auto;
+  border:5px#ccd5ae ridge; 
+}
+/* Add styles for the pop-up */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#popup-content {
+  text-align: center;
+}
+
+#guessInput {
+  margin-top: 10px;
+  padding: 5px;
 }

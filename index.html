@@ -1,17 +1,111 @@
 <!DOCTYPE html>
-<html>
-
+  <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            background-color: #f00; /* Change this to your desired confetti color */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="script.js"></script>
 </head>
-
 <body>
-  <h1>JavaScript Project </h1>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <h1>Welcome to the Hangman Game!</h1>
+    <h2>You're now playing the Mediterranean Diet! Guess the food item or have health problems!</h2>
+    <img id="image" src="https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_300,dpr_3/https://assets.app.engoo.com/images/1QOv4UDMTuBifnyjtBvWqA.jpeg"/>
+    <script>
+        // Function to create a confetti element
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            document.body.appendChild(confetti);
 
+            // Remove the confetti element after the animation is complete
+            confetti.addEventListener('animationiteration', () => {
+                confetti.remove();
+            });
+        }
+
+        // Function to trigger confetti at intervals
+        function triggerConfetti() {
+            setInterval(createConfetti, 100); // Adjust the interval as needed
+        }
+
+        // Start the confetti animation
+        triggerConfetti();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman Game</title>
+    <style>
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6384;
+            border-radius: 50%;
+            animation: confetti-fall 2s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translate(0, -100vh);
+            }
+            100% {
+                transform: translate(0, 100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Hangman Game!</h1>
+    <h2>You're now playing the Mediterranean Diet! Guess the food item or have health problems!</h2>
+    <img id="image" src="https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_300,dpr_3/https://assets.app.engoo.com/images/1QOv4UDMTuBifnyjtBvWqA.jpeg" />
+    <script>
+        // Function to create a confetti element
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            document.body.appendChild(confetti);
+
+            // Remove the confetti element after the animation is complete
+            confetti.addEventListener('animationend', () => {
+                confetti.remove();
+            });
+        }
+
+        // Function to trigger confetti at intervals
+        function triggerConfetti() {
+            setInterval(createConfetti, 100); // Adjust the interval as needed
+        }
+
+        // Start the confetti animation
+        triggerConfetti();
+    </script>
+</body>
 </html>
